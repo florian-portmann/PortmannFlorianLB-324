@@ -5,29 +5,27 @@ repos:
     - id: check-byte-order-marker
     - id: check-case-conflict
     - id: check-yaml
-    - id: end-of-file-fixer
     - id: flake8
     - id: mixed-line-ending
       args:
       - --fix=lf
     - id: trailing-whitespace
-  
+
   - repo: https://github.com/psf/black
-      rev: 23.10.0
-      hooks:
-        - id: black
-          language_version: python3.11
-          args: ['--quiet']
-          name: black-format
-          stages: [commit]
+    rev: 23.10.0
+    hooks:
+    - id: black
+      language_version: python3.11
+      args: ['--quiet']
 
   - repo: local
     hooks:
-      - id: test_app
-        stages: [commit]
-        types: [python]
-        name: test_app
-        entry: python -m pytest
-        language: system
-        pass_filenames: false
-        always_run: true
+    - id: test_app
+      name: test_app
+      stages: [commit]
+      types: [python]
+      name: pytest-check
+      entry: python -m pytest
+      language: system
+      pass_filenames: false
+      always_run: true
