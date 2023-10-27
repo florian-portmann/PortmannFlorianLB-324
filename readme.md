@@ -26,3 +26,5 @@ Erklären Sie hier, wie Sie das Passwort aus Ihrer lokalen `.env` auf Azure übe
 4. et voilà
    
     ![image](https://github.com/florian-portmann/PortmannFlorianLB-324/assets/89086527/036f229a-a04e-432d-b51e-7f0075e724e2)
+
+https://portmannflorianlb-324.azurewebsites.net
